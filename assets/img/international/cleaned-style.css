@@ -1,0 +1,148 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+/* ========== Reset ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========== Variables ========== */
+:root {
+    --primary-color: #004e92;
+    --secondary-color: #2a5298;
+    --accent-color: #1e3c72;
+    --text-color: #333;
+    --text-light: #666;
+    --text-lighter: #888;
+    --background-color: #f9f9f9;
+    --white: #ffffff;
+    --border-color: #e0e0e0;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.1);
+    --border-radius: 12px;
+    --transition: 0.3s ease;
+}
+
+/* ========== Global Styles ========== */
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========== Components ========== */
+.btn {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all var(--transition);
+}
+.btn:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* ========== Cards ========== */
+.card, .post-card, .news-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+.card:hover,
+.post-card:hover,
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* ========== Fallback for backdrop-filter ========== */
+.backdrop {
+    background-color: rgba(255, 255, 255, 0.8); /* fallback */
+    backdrop-filter: blur(10px);
+}
+
+/* ========== News Grid Example (news-card already unified) ========== */
+.news-card img,
+.post-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.news-card-content,
+.post-text {
+    padding: 1.5rem;
+}
+.news-card h3,
+.post-text h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+.news-card h3 a,
+.post-text a {
+    color: var(--primary-color);
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+.news-card h3 a::after,
+.post-text a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: width var(--transition);
+}
+.news-card h3 a:hover::after,
+.post-text a:hover::after {
+    width: 100%;
+}
+.news-card p,
+.post-text p {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+/* ========== Read More Button ========== */
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #fff;
+    background-color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color var(--transition);
+}
+.read-more:hover {
+    background-color: var(--primary-color);
+}

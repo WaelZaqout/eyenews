@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عين الخبر - أخبار محلية</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        main {
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: #004e92;
+            margin-bottom: 2rem;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .news-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 1rem;
+        }
+
+        .news-content h3 {
+            font-size: 1.2rem;
+            margin: 0 0 0.5rem;
+            color: #1e3c72;
+        }
+
+        .news-content p {
+            font-size: 0.95rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .news-content a {
+            color: #2a5298;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .news-content a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>عين الخبر</h1>
+                    <p>نحو إعلام أكثر دقة وشفافية</p>
+                </div>
+                <div class="date-time">
+                    <div id="current-date"></div>
+                    <div id="current-time"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li class="dropdown">
+                    <a href="#" class="active">الاخبار ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="local.html" class="active">أخبار محلية</a></li>
+                        <li><a href="international.html">أخبار دولية</a></li>
+                        <li><a href="sports.html">رياضة</a></li>
+                        <li><a href="economy.html">اقتصاد</a></li>
+                        <li><a href="technology.html">تكنولوجيا</a></li>
+                        <li><a href="health.html">صحة</a></li>
+                        <li><a href="culture.html">ثقافة</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html">مدونة</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ✅ بداية المحتوى الرئيسي -->
+    <main>
+        <h2>أخبار محلية</h2>
+
+        <div class="news-grid">
+
+            <div class="news-card">
+                <img src="assets/img/international/img4.jpg" 
+                    alt="تحلية المياه">
+                <div class="news-content">
+                    <h3>افتتاح محطة جديدة لتحلية المياه في الجنوب</h3>
+                    <p>افتتحت الحكومة محطة متقدمة لتحلية المياه في مدينة رفح لتلبية احتياجات السكان من المياه النظيفة.
+                    </p>
+                    <a href="details.html?id=10" class="read-more">اقرأ المزيد</a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="assets/img/international/img6.jpg" 
+                    alt="حملة نظافة">
+                <div class="news-content">
+                    <h3>إطلاق حملة نظافة شاملة في أحياء العاصمة</h3>
+                    <p>بدأت البلديات حملة نظافة موسعة لتحسين المظهر العام بمشاركة المتطوعين والمؤسسات المحلية.</p>
+                    <a href="details.html?id=10" class="read-more">اقرأ المزيد</a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="assets/img/international/img5.jpg" 
+                    alt="عودة الدراسة">
+                <div class="news-content">
+                    <h3>عودة الطلاب إلى المدارس بعد عطلة الشتاء</h3>
+                    <p>استأنف آلاف الطلاب الدراسة وسط أجواء باردة وإجراءات احترازية بعد انتهاء العطلة الاستثنائية.</p>
+                    <a href="details.html?id=10" class="read-more">اقرأ المزيد</a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="assets/img/international/img3.jpg" 
+                    alt="توسعة الشارع">
+                <div class="news-content">
+                    <h3>بدء تنفيذ مشروع توسعة شارع البحر</h3>
+                    <p>انطلقت المرحلة الأولى من المشروع لرفع كفاءة البنية التحتية وتخفيف الازدحام في المنطقة الغربية.
+                    </p>
+                    <a href="details.html?id=10" class="read-more">اقرأ المزيد</a>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="assets/img/international/img2.jpg" 
+                    alt="توسعة الشارع">
+                <div class="news-content">
+                    <h3>بدء تنفيذ مشروع توسعة شارع البحر</h3>
+                    <p>انطلقت المرحلة الأولى من المشروع لرفع كفاءة البنية التحتية وتخفيف الازدحام في المنطقة الغربية.
+                    </p>
+                    <a href="details.html?id=10" class="read-more">اقرأ المزيد</a>
+                </div>
+            </div>
+            
+            <div class="news-card">
+                <img src="assets/img/international/img1.jpg" 
+                    alt="توسعة الشارع">
+                <div class="news-content">
+                    <h3>بدء تنفيذ مشروع توسعة شارع البحر</h3>
+                    <p>انطلقت المرحلة الأولى من المشروع لرفع كفاءة البنية التحتية وتخفيف الازدحام في المنطقة الغربية.
+                    </p>
+                    <a href="details.html?id=10" class="read-more">اقرأ المزيد</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>عين الخبر</h3>
+                    <p>موقع إخباري يهدف إلى تقديم الأخبار بدقة وشفافية</p>
+                </div>
+                <div class="footer-section">
+                    <h3>أقسام الموقع</h3>
+                    <ul>
+                        <li><a href="local.html">أخبار محلية</a></li>
+                        <li><a href="international.html">أخبار دولية</a></li>
+                        <li><a href="sports.html">رياضة</a></li>
+                        <li><a href="economy.html">اقتصاد</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <ul>
+                        <li><a href="contact.html">📧 info@einalkhabar.com</a></li>
+                        <li><a href="contact.html">📱 +966 12 345 6789</a></li>
+                        <li><a href="contact.html">📍 الرياض، السعودية</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid #333; padding-top: 1rem; margin-top: 2rem;">
+                <p>&copy; 2025 عين الخبر. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ✅ نهاية المحتوى الرئيسي -->
+    <script src="assets/script.js"></script>
+
+</body>
+
+</html>
