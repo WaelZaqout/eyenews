@@ -82,7 +82,7 @@
 ---
 ## 🌐 العرض الحي
 
-📡 [شاهد المشروع على GitHub Pages](https://USERNAME.github.io/skillup/)
+📡 [شاهد المشروع على GitHub Pages](https://waelzaqout.github.io/eyenews/index.html)
 
 
 ## 🧑‍💻 المطور
