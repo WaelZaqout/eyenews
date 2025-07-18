@@ -58,22 +58,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // تحديث الأخبار العاجلة
-    const breakingNews = document.querySelector('.breaking-news');
-    const newsUpdates = [
-        'عاجل: آخر التطورات في القضايا المهمة - تابعوا معنا',
-        'جديد: إعلان نتائج مهمة في القطاع الاقتصادي',
-        'عاجل: تطورات جديدة في الأحداث الجارية',
-        'حصري: معلومات جديدة حول القضايا الراهنة'
-    ];
+    // // تحديث الأخبار العاجلة
+    // const breakingNews = document.querySelector('.breaking-news');
+    // const newsUpdates = [
+    //     'عاجل: آخر التطورات في القضايا المهمة - تابعوا معنا',
+    //     'جديد: إعلان نتائج مهمة في القطاع الاقتصادي',
+    //     'عاجل: تطورات جديدة في الأحداث الجارية',
+    //     'حصري: معلومات جديدة حول القضايا الراهنة'
+    // ];
 
-    if (breakingNews) {
-        let newsIndex = 0;
-        setInterval(() => {
-            newsIndex = (newsIndex + 1) % newsUpdates.length;
-            breakingNews.innerHTML = `<strong>عاجل:</strong> ${newsUpdates[newsIndex]}`;
-        }, 5000);
-    }
+    // if (breakingNews) {
+    //     let newsIndex = 0;
+    //     setInterval(() => {
+    //         newsIndex = (newsIndex + 1) % newsUpdates.length;
+    //         breakingNews.innerHTML = `<strong>عاجل:</strong> ${newsUpdates[newsIndex]}`;
+    //     }, 5000);
+    // }
 
     // تأثيرات النموذج
     const form = document.querySelector('.contact-form form');

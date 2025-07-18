@@ -23,6 +23,8 @@
     --warm-accent: #f59e0b;
     --warm-accent-dark: #d97706;
     --warm-accent-light: #fbbf24;
+    --warm-accent-red: #ca1717;
+
 
     /* ألوان النص */
     --text-primary: #1f2937;
@@ -317,7 +319,7 @@ header::before {
   background: rgba(0, 0, 0, 0.05);
   padding: 0.25rem 0;
   font-size: 1rem;
-  color: var(--warm-accent-dark);
+  color: var(--warm-accent-red);
   border-top: 1px solid var(--glass-border);
   border-bottom: 1px solid var(--glass-border);
 }
