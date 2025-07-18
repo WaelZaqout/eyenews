@@ -49,28 +49,37 @@
 </head>
 
 <body>
-<header role="banner">
-  <div class="container">
-    <div class="header-content">
-      <div class="logo">
-        <h1>👁️ عين الخبر</h1>
-        <p>نحو إعلام أكثر دقة وشفافية</p>
-      </div>
-      <div class="date-time">
-        <div id="current-date" aria-live="polite"></div>
-        <div id="current-time" aria-live="polite"></div>
-      </div>
-    </div>
-  </div>
-  <div class="news-ticker">
-    <marquee behavior="scroll" direction="right">📰 آخر الأخبار: عاجل - إطلاق منصة عين الخبر الجديدة... | تحديثات مباشرة لحظة بلحظة | مصداقية وشفافية تامة.</marquee>
-  </div>
-</header>
+    <header role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-content">
+                        <img src="assets/img/eya.png" alt="عين" class="eye-icon" />
+                        <h1>عين الخبر</h1>
+                    </div>
+                    <p>نحو إعلام أكثر دقة وشفافية</p>
+                </div>
+
+                <div class="date-time">
+                    <div id="current-date" aria-live="polite"></div>
+                    <div id="current-time" aria-live="polite"></div>
+                </div>
+                <button class="menu-toggle" id="menu-toggle" aria-label="فتح القائمة" aria-controls="main-menu"
+                    aria-expanded="false">
+                    <span class="menu-icon">&#9776;</span>
+                </button>
+            </div>
+        </div>
+        <div class="news-ticker">
+            <marquee behavior="scroll" direction="right">📰 آخر الأخبار: عاجل - إطلاق منصة عين الخبر الجديدة... |
+                تحديثات مباشرة لحظة بلحظة | مصداقية وشفافية تامة.</marquee>
+        </div>
+    </header>
 
 
     <nav role="navigation" aria-label="القائمة الرئيسية">
         <div class="container">
-            <ul class="nav-links">
+            <ul class="nav-links" id="main-menu">
                 <li><a href="index.html" class="active" aria-current="page">الرئيسية</a></li>
                 <li class="dropdown">
                     <a href="#" aria-expanded="false" aria-haspopup="true">الاخبار ▾</a>
@@ -93,7 +102,7 @@
 
     <main role="main">
         <div class="container">
-          
+
 
             <section class="hero-section" aria-labelledby="hero-title">
                 <article class="main-news">
@@ -190,7 +199,7 @@
                             <a href="details.html?id=7" class="read-more">اقرأ المزيد</a>
                         </div>
                     </article>
-                        <article class="news-card">
+                    <article class="news-card">
                         <img src="assets/img/technology/img4.jpg" alt="تحديثات في قطاع التعليم" loading="lazy"
                             width="400" height="250">
                         <div class="news-card-content">

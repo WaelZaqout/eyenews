@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(updateDateTime, 1000);
 
     // تفعيل حالة التنقل النشطة
-    const navLinks = document.querySelectorAll('.nav-links a');
-    if (navLinks.length > 0) {
-        navLinks.forEach(link => {
+    const navLinksList = document.querySelectorAll('.nav-links a');
+    if (navLinksList.length > 0) {
+        navLinksList.forEach(link => {
             link.addEventListener('click', function(e) {
-                navLinks.forEach(l => l.classList.remove('active'));
+                navLinksList.forEach(l => l.classList.remove('active'));
                 this.classList.add('active');
             });
         });
@@ -58,22 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // // تحديث الأخبار العاجلة
-    // const breakingNews = document.querySelector('.breaking-news');
-    // const newsUpdates = [
-    //     'عاجل: آخر التطورات في القضايا المهمة - تابعوا معنا',
-    //     'جديد: إعلان نتائج مهمة في القطاع الاقتصادي',
-    //     'عاجل: تطورات جديدة في الأحداث الجارية',
-    //     'حصري: معلومات جديدة حول القضايا الراهنة'
-    // ];
 
-    // if (breakingNews) {
-    //     let newsIndex = 0;
-    //     setInterval(() => {
-    //         newsIndex = (newsIndex + 1) % newsUpdates.length;
-    //         breakingNews.innerHTML = `<strong>عاجل:</strong> ${newsUpdates[newsIndex]}`;
-    //     }, 5000);
-    // }
 
     // تأثيرات النموذج
     const form = document.querySelector('.contact-form form');
@@ -106,5 +91,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, 2000);
             }, 1000);
         });
+    }
+
+    // تعريف المتغيرات مرة واحدة فقط
+    var menuToggle = document.getElementById('menu-toggle');
+    var navLinks = document.getElementById('main-menu');
+
+    // كود القائمة الجانبية للموبايل
+    if(menuToggle && navLinks) {
+      menuToggle.addEventListener('click', function() {
+        var isOpen = navLinks.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
     }
 });
