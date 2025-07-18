@@ -59,6 +59,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
+document.getElementById('scrollTopBtn').onclick = function() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+};
 
     // تأثيرات النموذج
     const form = document.querySelector('.contact-form form');
@@ -105,3 +108,12 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
 });
+// إظهار/إخفاء زر العودة للأعلى
+window.onscroll = function() {
+    const btn = document.getElementById('scrollTopBtn');
+    if (window.scrollY > 200) {
+        btn.style.display = 'flex';
+    } else {
+        btn.style.display = 'none';
+    }
+};
